@@ -1,0 +1,5 @@
+baseURL = "http://blog.rxbc.se"
+languageCode = "en-GB"
+title = "Viktors blog"
+
+theme = 'ananke'
