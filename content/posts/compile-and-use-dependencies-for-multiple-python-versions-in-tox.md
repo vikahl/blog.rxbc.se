@@ -1,7 +1,6 @@
 ---
 title: "Compile and use dependencies for multiple Python versions in Tox"
 date: 2023-08-01
-draft: true
 ---
 
 This post shows a way to easily compile and use requirement files for multiple
