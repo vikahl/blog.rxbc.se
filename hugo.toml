@@ -1,5 +1,36 @@
 baseURL = "http://blog.rxbc.se"
 languageCode = "en-GB"
-title = "Viktors blog"
+title = "Viktor's blog"
 
-theme = 'ananke'
+theme = "PaperMod"
+paginate = 10
+enableRobotsTXT = true
+
+titleCaseStyle = "firstupper"
+
+[params]
+env = "production"
+description = "Viktor's blog"
+defaultTheme = "auto"
+ShowReadingTime = false
+ShowShareButtons = false
+
+[params.assets]
+disableHLJS = true
+
+[menu]
+main = [
+  { identifier = "posts", name = "posts", url = "/posts/", weight = 10 },
+  { identifier = "about", name = "about", url = "/about/", weight = 20 },
+]
+
+
+[markup]
+[markup.highlight]
+  anchorLineNos = false
+  codeFences = true
+  guessSyntax = false
+  lineNos = true
+  noClasses = true
+  style = 'monokai'
+  tabWidth = 4
