@@ -1,6 +1,5 @@
 ---
 title: "About"
-date: 
 ---
 
 I am a security engineer and software developer living in Stockholm.
