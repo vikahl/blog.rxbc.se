@@ -4,9 +4,12 @@ date: 2023-08-01
 ---
 
 This post shows a way to easily compile and use requirement files for multiple
-Python versions in tox. I plan to expand my thoughts about dependency
-management and compiled requirements in future posts and this post therefore
-only contains a small motivation why you should compile.
+Python versions in tox. The gist is to use the tox environment names and
+`{envname}` variable to generate and reference the requirement files.
+
+I plan to expand my thoughts about dependency management and compiled
+requirements in future posts and this post therefore only contains a small
+motivation why you should compile.
 
 ## Why compile dependencies?
 
