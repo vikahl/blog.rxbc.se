@@ -77,7 +77,7 @@ commands =
 
 ## Use the requirement files
 
-Since we cleverly named out requirement-generating environments
+Since we cleverly named our requirement-generating environments
 `requirements-py{version}` _(note the py-part which is needed if you use the
 common pyXX notation for environments)_ and saved the file named as
 `requirements-{envname}-dev.txt` we can easily reference them in the `deps`
