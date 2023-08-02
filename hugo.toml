@@ -14,6 +14,7 @@ description = "Viktor's blog"
 defaultTheme = "auto"
 ShowReadingTime = false
 ShowShareButtons = false
+ShowFullTextinRSS = true
 
 [params.assets]
 disableHLJS = true
