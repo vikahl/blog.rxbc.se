@@ -1,6 +1,6 @@
 ---
 title: "Know what you install: Install a package"
-date: 2023-11-06T16:15:50+01:00
+date: 2023-11-15
 ShowToc: true
 tags: ["know-what-you-install"]
 ---
