@@ -20,7 +20,6 @@ for filename in added_files.split("\n"):
             # first 10 lines and be happy with it.
             metadata_block = "".join([next(fh) for _ in range(10)])
 
-            print(metadata_block)
             metadata = re.findall("(\w+):\s*(.*)", metadata_block, flags=re.M)
 
         for line in metadata:
@@ -36,5 +35,5 @@ for filename in added_files.split("\n"):
                 # Try to load it as a datetime:
                 date = datetime.datetime.fromisoformat(value)
 
-                if date.today() != date:
-                    raise RuntimeError(f"Date is too old: {date}")
+                if datetime.date.today() != date.date():
+                    raise RuntimeError(f"Date is too old: {date.date()}. (today {datetime.date.today()})")
