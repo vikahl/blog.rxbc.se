@@ -7,7 +7,8 @@ tags: ["know-what-you-install"]
 
 > This post is the first in a series that explains potential issues related to
 > dependencies. It does not attempt to explain all nuances of package
-> management and supply chain security, but will try to give enough context so
+> management and supply chain security, but can serve as an introduction to
+> some Python-specific parts.
 > 
 > In this post, we will go through what happens when you install a package and
 > how to specify a version. We will also go through the dependency resolution
