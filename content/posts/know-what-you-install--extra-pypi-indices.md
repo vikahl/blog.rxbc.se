@@ -34,14 +34,14 @@ This opens up for _dependency confusion_ attacks, where you expect
 your internal package but instead get a package with malicious code that
 someone has uploaded to PyPI.org.
 
-{{< box warning >}}
+{{< notice warning >}}
 Problem: Pip regards all indices as equal
 
 When specifying multiple indices with `--extra-index-url`, Pip will regard all
 indices as equal and will fetch packages from one of them.
-{{</ box >}}
+{{</ notice >}}
 
-{{< box tip >}}
+{{< notice tip >}}
 Solution: Be very careful when using `--extra-index-url`
 
 Be very careful when using `--extra-index-url` and mitigate the risk of
@@ -56,7 +56,7 @@ dependency confusion attacks by one or several of the steps below.
 There is no easy solution to the problem of using multiple indices, but it is
 being worked on and e.g., [PEP 708](https://peps.python.org/pep-0708/) will
 help when it has been accepted and implemented.
-{{< /box >}}
+{{< /notice >}}
 
 ## Use hashes to get reproducible builds
 
@@ -89,7 +89,7 @@ multiple Python versions in Tox]_ contains example how to do this.
 
 [Compile and use dependencies for multiple Python versions in Tox]: {{< ref "compile-and-use-dependencies-for-multiple-python-versions-in-tox.md" >}} 
 
-{{<box info >}}
+{{<notice info >}}
 Hash checking will only ensure the same package is installed every time
 
 Checking the hashes will ensure that the intended package content is installed,
@@ -99,7 +99,7 @@ hash points towards the malicious package.
 Therefore, hash checking in itself is not sufficient to mitigate the risk of
 using multiple indices, but can be one part in the mitigation.
 
-{{< /box >}}
+{{< /notice >}}
 
 [hash checking]: https://pip.pypa.io/en/stable/topics/repeatable-installs/#hash-checking
 [pypa/pip#3257]: https://github.com/pypa/pip/issues/3257
