@@ -74,14 +74,14 @@ Two conclusions can be drawn from these commands:
    FastAPI, just as most other packages, will have its own dependencies. These
    dependencies of dependencies are called _transitive dependencies_.
 
-{{< box warning >}}
+{{< notice warning >}}
 Problem 1: The "latest" package version is ambiguous
 
 Omitting the obvious answer that newer versions can be released on PyPI at any
 time, it is also important to note that the Python version, or in some cases
 even factors such as the operating system can impact which versions that are
 being installed.
-{{< /box >}}
+{{< /notice >}}
 
 [FastAPI]: https://fastapi.tiangolo.com/
 
@@ -127,7 +127,7 @@ Similarly, if you rely on a feature that was removed in a specific version and
 do not yet have updated your code, you can use the `'package<0.95.0'` syntax
 instead.
 
-{{< box tip >}}
+{{< notice tip >}}
 Solution 1: Specify version using version clauses
 
 Specifying package version using version clauses will ensure that you get the
@@ -135,9 +135,9 @@ expected version.
 
 For deployed code (e.g., services) it is recommended to specify an exact
 version (`==`) to avoid surprises in the future.
-{{< /box >}}
+{{< /notice >}}
 
-{{< box info >}}
+{{< notice info >}}
 Avoid over-restricting dependencies in libraries
 
 Library developers should be very mindful in how they restrict dependency
@@ -146,7 +146,7 @@ other libraries (which might have different restrictions).
 
 Henry Schreiner has written a good post titled _[Should You Use Upper Bound
 Version Constraints?](https://iscinumpy.dev/post/bound-version-constraints)_.
-{{< /box >}}
+{{< /notice >}}
 
 # Wheels and source distributions (sdist)
 
