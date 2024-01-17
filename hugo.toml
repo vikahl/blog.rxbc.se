@@ -50,9 +50,3 @@ main = [
     disable = true
   [privacy.youtube]
     disable = true
-
-[module]
-  [[module.imports]]
-    path = "github.com/martignoni/hugo-notice"
-  [[module.imports]]
-    path = "PaperMod"
