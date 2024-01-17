@@ -1,4 +1,5 @@
-{{/*  Source:https://gitlab.com/Roneo/hugo-shortcode-roneo-collection  */}}
+{{/* Initial source: https://gitlab.com/Roneo/hugo-shortcode-roneo-collection */}}
+{{/* Modifications (new colour schema, darkmode) from: https://github.com/martignoni/hugo-notice/ */}}
 
 {{/* Available box types: warning, info, important, tip */}}
 {{- $boxType := .Get 0 | default "info" -}}
@@ -11,6 +12,52 @@
 {{- if not ($.Page.Scratch.Get "box_count") -}}
 
   <style type="text/css">
+    .box{
+      --root-color:#444;
+      --root-background:#eff;
+      --title-color:#fff;
+      --title-background:#7bd;
+      --warning-title:#c33;
+      --warning-content:#fee;
+      --info-title:#0089e488;
+      --info-content:#0089e41c;
+      --important-title:#6be;
+      --important-content:#e7f2fa;
+      --tip-title:#5a5;
+      --tip-content:#efe
+      }
+      @media (prefers-color-scheme:dark){
+        .box{
+        --root-color:#ddd;
+        --root-background:#eff;
+        --title-color:#fff;
+        --title-background:#7bd;
+        --warning-title:#800;
+        --warning-content:#400;
+        --info-title:#0089e488;
+        --info-content:#0089e41c;
+        --important-title:#069;
+        --important-content:#023;
+        --tip-title:#363;
+        --tip-content:#121
+        }
+      }
+    body.dark .box {
+      --root-color:#ddd;
+      --root-background:#eff;
+      --title-color:#fff;
+      --title-background:#7bd;
+      --warning-title:#800;
+      --warning-content:#400;
+      --info-title:#0089e488;
+      --info-content:#0089e41c;
+      --important-title:#069;
+      --important-content:#023;
+      --tip-title:#363;
+      --tip-content:#121
+    }
+
+
     .box-shortcode {
       padding: 1.6em;
       padding-top: 1.4em;
@@ -18,8 +65,8 @@
       margin-top: 1em;
       margin-bottom: 2em;
       border-radius: 4px;
-      color: #444;
-      background: #f3ebe850;
+      color: var(--root-color);
+      background: var(--root-background);
     }
 
     .box-title {
@@ -27,33 +74,33 @@
       padding: 4px 18px;
       border-radius: 4px 4px 0 0;
       font-weight: 700;
-      color: #fff;
-      background: #6ab0de;
+      color: var(--title-color);
+      background: var(--title-background);
     }
     .box-shortcode.warning .box-title {
-      background: #ff6b6b;
+      background: var(--warning-title);
     }
     .box-shortcode.warning {
-      background: #ff6b6b4f;
+      background: var(--warning-content);
     }
     .box-shortcode.info .box-title {
-      background: #0089e488;
+      background: var(--info-title);
     }
     .box-shortcode.info {
-      background: #0089e41c;
+      background: var(--info-content);
       box-shadow: 3px 3px 5px #0089e410;
     }
     .box-shortcode.important .box-title {
-      background: #f7ec2c;
+      background: var(--important-title);
     }
     .box-shortcode.important {
-      background: #f7ec2c7d;
+      background: var(--important-content);
     }
     .box-shortcode.tip .box-title {
-      background: #a3ffa34d;
+      background: var(--tip-title);
     }
     .box-shortcode.tip {
-      background: #a3ffa34d;
+      background: var(--tip-content);
       box-shadow: 3px 3px 5px #0089e410;
     }
     .icon-box {
