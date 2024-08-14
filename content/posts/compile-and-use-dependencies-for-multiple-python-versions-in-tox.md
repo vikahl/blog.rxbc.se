@@ -12,6 +12,19 @@ ShowToc: true
 > requirements in future posts and this post therefore only contains a small
 > motivation why you should compile.
 
+{{< box info >}}
+Since this post was written I have switched from pip-tools to uv.
+
+More details about using uv can be found in [Compile dependencies with uv].
+This post has been updated with examples for both uv and pip-compile. If you
+want to read a historical version of this blog post, they can be found in
+[history page on Github].
+
+[Compile dependencies with uv]: {{< ref "compile-dependencies-with-uv.md" >}}
+[history page on Github]: https://github.com/vikahl/blog.rxbc.se/commits/main/content/posts/compile-and-use-dependencies-for-multiple-python-versions-in-tox.md
+{{< /box >}}
+
+
 ## Why compile dependencies?
 
 Compiled dependencies are mainly a tool for services or other Python code that
