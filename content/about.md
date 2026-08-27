@@ -15,7 +15,7 @@ see how this goes.
 You can email me at _blog﹫rxbc.se_.
 
 - [Github](https://github.com/vikahl/)
-- [LinkedIn](https://www.linkedin.com/in/viktorahlqvist/)
+- [LinkedIn](https://www.linkedin.com/in/viktorrimark/)
 
 ## License
 
